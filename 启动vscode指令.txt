@@ -1,0 +1,2 @@
+
+cd "C:\Users\qiu'guo\AppData\Local\Programs\Microsoft VS Code"
