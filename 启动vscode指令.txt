@@ -1,2 +1,6 @@
 
 cd "C:\Users\qiu'guo\AppData\Local\Programs\Microsoft VS Code"
+cd "/cygdrive/d"
+cd  "D:\project\cse431\hw3"
+cd "/cygdrive/c"
+https://github.com/ChaoWao/UW-CSE341-Spring2019/blob/main/hw/hw3/hw3.sml
