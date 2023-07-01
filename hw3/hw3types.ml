@@ -1,7 +1,7 @@
 (* CSE341 HW3 Provided Code *)
 
 (* function composition operator from lecture *)
-let (%) f g x = f (g x)
+let ( % ) f g x = f (g x)
 
 exception NoAnswer
 
@@ -22,17 +22,12 @@ type valu =
 let rec g f1 f2 p =
   let r = g f1 f2 in
   match p with
-  | WildcardP         -> f1 ()
-  | VariableP x       -> f2 x
-  | ConstructorP(_,p) -> r p
-  | TupleP ps         -> List.fold_left (fun i p -> (r p) + i) 0 ps
-  | _                 -> 0
+  | WildcardP -> f1 ()
+  | VariableP x -> f2 x
+  | ConstructorP (_, p) -> r p
+  | TupleP ps -> List.fold_left (fun i p -> r p + i) 0 ps
+  | _ -> 0
 
 (**** for the challenge problem only ****)
 
-type typ =
-  | AnythingT
-  | UnitT
-  | IntT
-  | TupleT of typ list
-  | VariantT of string
+type typ = AnythingT | UnitT | IntT | TupleT of typ list | VariantT of string
